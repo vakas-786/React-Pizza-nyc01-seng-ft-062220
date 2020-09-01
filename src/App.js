@@ -39,8 +39,7 @@ class App extends Component {
       body: JSON.stringify({id: pizzaData.id, topping: pizzaData.topping, size: pizzaData.size, vegetarian: pizzaData.vegetarian })
     }
     fetch(url + pizzaData.id, options)
-    .then(response => response.json())
-    .then(data => this.componentDidMount())
+    .then(() => this.componentDidMount())
     
   }
 

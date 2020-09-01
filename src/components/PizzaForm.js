@@ -10,24 +10,6 @@ class PizzaForm extends React.Component {
     }
 }
 
-// vegHandler = (e) => {
-//   let newVegetarian = e.target.value === "Not Vegetarian" ? false: true 
-//   this.setState({editPizza: {...this.state.editPizza, vegetarian: newVegetarian}})
-// }
-
-// sizeHandler = (e) => {
-  
-//   this.setState({editPizza: {...this.state.editPizza, size: e.target.value}})
-// }
-
-// toppingHandler = (e) => {
-//   this.setState({ editPizza: {...this.state.editPizza, topping: e.target.value}})
-// }
-
-
-// onChangeHandler = (e) => {
-//     this.props.changePizzaHandler(e.target.name, e.target.value, this.props.selectedPizza.id)
-// }
 
 submitPizza = (e) => {
   
