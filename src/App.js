@@ -2,9 +2,14 @@ import React, { Component, Fragment } from 'react';
 import Header from './components/Header'
 import PizzaForm from './components/PizzaForm'
 import PizzaList from './containers/PizzaList'
+
 class App extends Component {
 
   componentDidMount() {
+    this.fetchPizzas()
+  }
+  fetchPizzas = () => {
+
     fetch('http://localhost:3000/pizzas')
     .then(response => response.json())
     .then(pizza => this.setState({pizza: pizza}))
@@ -39,7 +44,8 @@ class App extends Component {
       body: JSON.stringify({id: pizzaData.id, topping: pizzaData.topping, size: pizzaData.size, vegetarian: pizzaData.vegetarian })
     }
     fetch(url + pizzaData.id, options)
-    .then(() => this.componentDidMount())
+    .then(() => this.fetchPizzas())
+    //anonymous function to change the form to show changes REMEMBER NO NEED FOR .then(response => response.json()) for patch
     
   }
 
@@ -57,11 +63,7 @@ class App extends Component {
     this.setState({ editPizza: {...this.state.editPizza, topping: e.target.value}})
   }
 
-
-
   render() {
-
-
 
     return (
       <Fragment>

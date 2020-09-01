@@ -2,13 +2,13 @@ import React from "react"
 
 class PizzaForm extends React.Component {
 
-  state = {
-    selectedPizza: {
-        topping: '',
-        size: '',
-        vegetarian: false
-    }
-}
+//   state = {
+//     selectedPizza: {
+//         topping: '',
+//         size: '',
+//         vegetarian: false
+//     }
+// }
 
 
 submitPizza = (e) => {
